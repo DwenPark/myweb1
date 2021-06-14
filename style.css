@@ -1,6 +1,4 @@
 
-
-
 body {
     background-color: hsl(0, 0%, 0%);
 }
@@ -197,4 +195,107 @@ h1 {
 
 a.blog{
   font-size:20px;
+}
+
+.sliderbody{
+  margin: 0;
+  padding: 0;
+  height : 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider{
+  align-self: center;
+  width: 800px;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 600px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slice{
+  width: 20%;
+  transition: 2s;
+}
+
+.slice img{
+  width: 800px;
+  height: 600px;
+}
+
+.navigation-manual{
+  position:absolute;
+  width: 800px;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid greenyellow;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~.first{
+  margin-left: 0;
+}
+
+#radio2:checked ~.first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~.first{
+  margin-left: -40%;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 550px;
+}
+
+.navigation-auto div{
+  border: 2px solid greenyellow;
+  padding : 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1.checked ~ .navigation-auto .auto-btn1{
+  background: greenyellow;
+}
+
+#radio2.checked ~ .navigation-auto .auto-btn2{
+  background: greenyellow;
+}
+
+#radio3.checked ~ .navigation-auto .auto-btn3{
+  background: greenyellow;
 }
